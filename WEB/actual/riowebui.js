@@ -1,26 +1,28 @@
 async: false;
+var xhttp = new XMLHttpRequest();
 $(document).ready(function()
 	{
-		$( "#start" ).click(startbutton);
-		$( "#stop" ).click(stopbutton);
+		$( "#start" ).click(buttonclick);
+		$( "#stop" ).click(buttonclick);
+		$( "#left" ).click(buttonclick);
+		$( "#right" ).click(buttonclick);
+		$( "#direction" ).click(reversegear);
 	}
 )
-function startbutton()
+function buttonclick()
 {	
-	var xhttp = new XMLHttpRequest();
 	URL = document.URL;
 	URL = URL.replace("riowebui.html","") + "function";
-	URL = URL +"?name=" + "start"
+	URL = URL +"?name=" + this.id
 	xhttp.open("GET", URL, true)
 	xhttp.send()
 }
 
-function stopbutton()
+function reversegear()
 {
-	var xhttp = new XMLHttpRequest();
 	URL = document.URL;
 	URL = URL.replace("riowebui.html","") + "function";
-	URL = URL +"?name=" + "stop"
+	URL = URL +"?name=" + "reverse"
 	xhttp.open("GET", URL, true)
 	xhttp.send()
 }
