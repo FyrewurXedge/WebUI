@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+
+	<title>my RIO WEB UI </title>
+
+	<style>
+		body {
+		background-color: lightblue;
+		}
+		
+		.startbutton{
+			background-image: url(/rio/images/ic_navigation_black_36dp.png);
+			background-position: center;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 15px;
+		}
+		
+		.stopbutton{
+			background-image: url(/rio/images/ic_close_black_36dp.png);
+			background-position: center;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 150px;
+		}
+		
+		@media screen and (max-width: 480px) {
+			body {
+				background-color: lightgreen;
+				button {
+					width: 50%;
+					height: 50%;
+				}
+				width: 50%;
+				height: 50%;
+			}
+		}
+		
+	</style>
+		
+
+	<body style="margin:40px">
+		<div>
+			<button type="button" class='startbutton' id='start'></button>
+			<button type="button" class='stopbutton' id='stop'></button>
+			<br>
+			<button type="button" id='direction' style="position:relative; left:40%; height:60pt; width:80pt;">FORWARD</button><br>
+			<br>
+			<button type="button" id='left' style="position:relative; left:15%; height:20pt; width:80pt;">LEFT</button>
+			<button type="button" id='right' style="position:relative; left:20%; height:20pt; width:80pt;">RIGHT</button>
+		</div>
+	</body>
+	
+	<script type="text/javascript" src="/rio/js/jquery_2_2_4.js"></script>
+	<script type="text/javascript" src="/rio/js/jquery.mobile-1.4.5.js"></script>
+	<script type="text/javascript" src="/rio/js/riowebui.js"></script>
+
+</html>
