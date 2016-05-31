@@ -1,6 +1,9 @@
 async: false;
 var xhttp = new XMLHttpRequest();
 var dir_gear = $( '#direction').attr('data');
+var key_value = $( '#key' ).attr('data');
+var engine_value = $( '#engine' ).attr('data');
+
 
 document.addEventListener('touchmove', this.touchmove);
 
@@ -9,7 +12,16 @@ function touchmove(e) {
 }
 
 $(document).ready(function(){
-	
+		
+		//key commands
+		
+		$( "#key" ).ready(key_send);
+		$( "#key" ).click(key_toggle);
+		
+		//engine commands
+		$( "#engine" ).ready(engine_send);
+		$( "#engine" ).click(engine_toggle);
+		
 		//start button commands
 		
 		$( "#start" ).taphold(mDown);
@@ -96,3 +108,73 @@ function gear(){
 		console.log(dir_gear);	
 	}	
 }
+
+function key_send(){
+	key_value = $('#key').attr('data');
+	URL = document.URL;
+	URL = URL.replace("riowebui.html","") + "key";
+	URL = URL +"?name=" + key_value;
+	xhttp.open("GET", URL, true)
+	xhttp.send()
+	console.log(key_value);
+}
+
+function key_toggle(){
+	if($(this).attr('data') == "keyin"){
+		$(this).attr('data', "keyout");
+		key_value = $('#key').attr('data');
+			URL = document.URL;
+		URL = URL.replace("riowebui.html","") + this.id;
+		URL = URL +"?name=" + dir_gear;
+		xhttp.open("GET", URL, true)
+		xhttp.send()
+		console.log(key_value);
+	} 
+	else
+	if($(this).attr('data') == "keyout"){
+		$(this).attr('data', "keyin");
+		key_value = $('#key').attr('data');
+			URL = document.URL;
+		URL = URL.replace("riowebui.html","") + this.id;
+		URL = URL +"?name=" + key_value;
+		xhttp.open("GET", URL, true)
+		xhttp.send()
+		console.log(key_value);	
+	}	
+}
+
+function engine_send(){
+	engine_value = $('#engine').attr('data');
+	URL = document.URL;
+	URL = URL.replace("riowebui.html","") + "engine";
+	URL = URL +"?name=" + engine_value;
+	xhttp.open("GET", URL, true)
+	xhttp.send()
+	console.log(engine_value);
+}
+
+function engine_toggle(){
+	if($(this).attr('data') == "kill"){
+		$(this).attr('data', "idle");
+		engine_value = $('#engine').attr('data');
+			URL = document.URL;
+		URL = URL.replace("riowebui.html","") + this.id;
+		URL = URL +"?name=" + engine_value;
+		xhttp.open("GET", URL, true)
+		xhttp.send()
+		console.log(engine_value);
+	} 
+	else
+	if($(this).attr('data') == "idle"){
+		$(this).attr('data', "kill");
+		engine_value = $('#engine').attr('data');
+			URL = document.URL;
+		URL = URL.replace("riowebui.html","") + this.id;
+		URL = URL +"?name=" + key_value;
+		xhttp.open("GET", URL, true)
+		xhttp.send()
+		console.log(engine_value);	
+	}	
+}
+
+

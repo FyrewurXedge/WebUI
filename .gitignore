@@ -1,21 +1,19 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# Libraries
+*.lvlibp
+*.llb
 
-# Folder config file
-Desktop.ini
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# Executables
+*.exe
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
+# Metadata
+*.aliases
+*.lvlps
 
 # =========================
 # Operating System Files
@@ -46,18 +44,24 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-#LabVIEW
-*.aliases
-*.lvlps
-*.lvlps
-*.lvlps
-*.lvlps
-WEB/WEBUI.lvlps
-*.lvlps
-*.lvlps
-WEB/WEBUI.lvlps
-WEB/WEBUI.lvlps
-*.lvlps
-WEB/WEBUI.lvlps
-WEB/WEBUI.lvlps
-*.lvlps
+# Windows
+# =========================
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk

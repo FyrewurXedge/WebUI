@@ -57,6 +57,14 @@
 					<Property Name="ws.method" Type="Int">1</Property>
 					<Property Name="ws.type" Type="Int">1</Property>
 				</Item>
+				<Item Name="engine.vi" Type="VI" URL="../methods/engine.vi">
+					<Property Name="ws.method" Type="Int">1</Property>
+					<Property Name="ws.type" Type="Int">1</Property>
+				</Item>
+				<Item Name="key.vi" Type="VI" URL="../methods/key.vi">
+					<Property Name="ws.method" Type="Int">1</Property>
+					<Property Name="ws.type" Type="Int">1</Property>
+				</Item>
 				<Item Name="left.vi" Type="VI" URL="../methods/left.vi">
 					<Property Name="ws.method" Type="Int">1</Property>
 					<Property Name="ws.type" Type="Int">1</Property>

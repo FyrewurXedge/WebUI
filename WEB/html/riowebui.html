@@ -11,6 +11,11 @@
 <body style="margin:40px">
 	<div data-role="page" id="pageone">
 		<div data-role="main" class="ui-content">
+			<div data-role="controlgroup" data-type="horizontal" id='mech'>
+				<button type="button" data='keyout' class='keybutton ui-btn' id='key'>
+				<button type="button" data='idle' class='enginebutton ui-btn' id='engine'>
+			</div>
+			
 			<div data-role="controlgroup" data-type="horizontal" id='main'>
 				<button type="button" class='startbutton ui-btn' id='start'></button>
 				<button type="button" class='stopbutton ui-btn' id='stop'></button>
@@ -20,6 +25,12 @@
 			<div data-role="controlgroup" data-type="horizontal" id='steer'>
 				<button type="button" class='leftbutton ui-btn' id='left'></button>
 				<button type="button" class='rightbutton ui-btn' id='right'></button>
+			</div>
+			
+			<div data-role="controlgroup" data-type="horizontal" id='lightdoor'>
+				<button type="button" data='close'class='ldbutton ui-btn' id='leftdoor'></button>
+				<button type="button" data='false' class='headbutton ui-btn' id='headlights'></button>
+				<button type="button" data='close' class='rdbutton ui-btn' id='rightdoor'></button>
 			</div>
 		</div>
 	</div>
