@@ -11,7 +11,6 @@
 		<Property Name="IOScan.Priority" Type="UInt">9</Property>
 		<Property Name="IOScan.ReportModeConflict" Type="Bool">true</Property>
 		<Property Name="IOScan.StartEngineOnDeploy" Type="Bool">false</Property>
-		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.tcp.enabled" Type="Bool">false</Property>
@@ -22,8 +21,6 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="utilities" Type="Folder">
-			<Item Name="Gas_Utility.vi" Type="VI" URL="../utilities/Gas_Utility.vi"/>
-			<Item Name="Steer_Utilitiy.vi" Type="VI" URL="../utilities/Steer_Utilitiy.vi"/>
 			<Item Name="Clear Globals.vi" Type="VI" URL="../utilities/Clear Globals.vi"/>
 			<Item Name="GlobalSender.vi" Type="VI" URL="../utilities/GlobalSender.vi"/>
 		</Item>
@@ -64,10 +61,6 @@
 					<Property Name="ws.method" Type="Int">1</Property>
 					<Property Name="ws.type" Type="Int">1</Property>
 				</Item>
-				<Item Name="headlights.vi" Type="VI" URL="../methods/headlights.vi">
-					<Property Name="ws.method" Type="Int">1</Property>
-					<Property Name="ws.type" Type="Int">1</Property>
-				</Item>
 				<Item Name="key.vi" Type="VI" URL="../methods/key.vi">
 					<Property Name="ws.method" Type="Int">1</Property>
 					<Property Name="ws.type" Type="Int">1</Property>
@@ -76,15 +69,7 @@
 					<Property Name="ws.method" Type="Int">1</Property>
 					<Property Name="ws.type" Type="Int">1</Property>
 				</Item>
-				<Item Name="leftdoor.vi" Type="VI" URL="../methods/leftdoor.vi">
-					<Property Name="ws.method" Type="Int">1</Property>
-					<Property Name="ws.type" Type="Int">1</Property>
-				</Item>
 				<Item Name="right.vi" Type="VI" URL="../methods/right.vi">
-					<Property Name="ws.method" Type="Int">1</Property>
-					<Property Name="ws.type" Type="Int">1</Property>
-				</Item>
-				<Item Name="rightdoor.vi" Type="VI" URL="../methods/rightdoor.vi">
 					<Property Name="ws.method" Type="Int">1</Property>
 					<Property Name="ws.type" Type="Int">1</Property>
 				</Item>

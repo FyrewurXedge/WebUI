@@ -3,11 +3,10 @@ var xhttp = new XMLHttpRequest();
 var dir_gear = $( '#direction').attr('data');
 var key_value = $( '#key' ).attr('data');
 var engine_value = $( '#engine' ).attr('data');
-var left_value = $( '#leftdoor' ).attr('data');
-var right_value = $( '#rightdoor' ).attr('data');
-var head_value = $( '#headlights' ).attr('data');
+
 
 document.addEventListener('touchmove', this.touchmove);
+
 function touchmove(e) {
     e.preventDefault()
 }
@@ -56,17 +55,6 @@ $(document).ready(function(){
 		$( "#right" ).mousedown(mDown);
 		$( "#right" ).mouseup(mUp);		
 		
-		//leftdoor
-		$( "#leftdoor" ).ready(left_send);
-		$( "#leftdoor" ).click(left_toggle);
-		
-		//rightdoor
-		$( "#rightdoor" ).ready(right_send);
-		$( "#rightdoor" ).click(right_toggle);
-		
-		//headlights
-		$( "#headlights" ).ready(head_send);
-		$( "#headlights" ).click(head_toggle);
 	}
 )
 function mDown(){	
@@ -94,7 +82,7 @@ function gear_send(){
 	URL = URL +"?name=" + dir_gear;
 	xhttp.open("GET", URL, true)
 	xhttp.send()
-	console.log(URL);
+	console.log(dir_gear);
 }
 
 function gear(){
@@ -106,7 +94,7 @@ function gear(){
 		URL = URL +"?name=" + dir_gear;
 		xhttp.open("GET", URL, true)
 		xhttp.send()
-		console.log(URL);
+		console.log(dir_gear);
 	} 
 	else
 	if($(this).attr('data') == "rev"){
@@ -117,7 +105,7 @@ function gear(){
 		URL = URL +"?name=" + dir_gear;
 		xhttp.open("GET", URL, true)
 		xhttp.send()
-		console.log(URL);	
+		console.log(dir_gear);	
 	}	
 }
 
@@ -128,7 +116,7 @@ function key_send(){
 	URL = URL +"?name=" + key_value;
 	xhttp.open("GET", URL, true)
 	xhttp.send()
-	console.log(URL);
+	console.log(key_value);
 }
 
 function key_toggle(){
@@ -137,10 +125,10 @@ function key_toggle(){
 		key_value = $('#key').attr('data');
 			URL = document.URL;
 		URL = URL.replace("riowebui.html","") + this.id;
-		URL = URL +"?name=" + key_value;
+		URL = URL +"?name=" + dir_gear;
 		xhttp.open("GET", URL, true)
 		xhttp.send()
-		console.log(URL);
+		console.log(key_value);
 	} 
 	else
 	if($(this).attr('data') == "keyout"){
@@ -151,19 +139,18 @@ function key_toggle(){
 		URL = URL +"?name=" + key_value;
 		xhttp.open("GET", URL, true)
 		xhttp.send()
-		console.log(URL);	
+		console.log(key_value);	
 	}	
 }
 
 function engine_send(){
-	$(this).attr('data', "idle");
 	engine_value = $('#engine').attr('data');
 	URL = document.URL;
 	URL = URL.replace("riowebui.html","") + "engine";
 	URL = URL +"?name=" + engine_value;
 	xhttp.open("GET", URL, true)
 	xhttp.send()
-	console.log(URL);
+	console.log(engine_value);
 }
 
 function engine_toggle(){
@@ -175,130 +162,19 @@ function engine_toggle(){
 		URL = URL +"?name=" + engine_value;
 		xhttp.open("GET", URL, true)
 		xhttp.send()
-		console.log(URL);
+		console.log(engine_value);
 	} 
 	else
 	if($(this).attr('data') == "idle"){
 		$(this).attr('data', "kill");
 		engine_value = $('#engine').attr('data');
-		URL = document.URL;
-		URL = URL.replace("riowebui.html","") + this.id;
-		URL = URL +"?name=" + engine_value;
-		xhttp.open("GET", URL, true)
-		xhttp.send()
-		console.log(URL);	
-
-	}
-	setTimeout(function(){
-		$('#engine').attr('data', "idle");
-		engine_value = $('#engine').attr('data');
-		URL = document.URL;
-		URL = URL.replace("riowebui.html","") + "engine";
-		URL = URL +"?name=" + engine_value;
-		xhttp.open("GET", URL, true)
-		xhttp.send()
-		console.log(URL);
-	},3500);	
-}
-
-function left_send(){
-	left_value = $('#leftdoor').attr('data');
-	URL = document.URL;
-	URL = URL.replace("riowebui.html","") + "leftdoor";
-	URL = URL +"?name=" + left_value;
-	xhttp.open("GET", URL, true)
-	xhttp.send()
-	console.log(URL);
-}
-
-function left_toggle(){
-	if($(this).attr('data') == "open"){
-		$(this).attr('data', "close");
-		left_value = $('#leftdoor').attr('data');
 			URL = document.URL;
 		URL = URL.replace("riowebui.html","") + this.id;
-		URL = URL +"?name=" + left_value;
+		URL = URL +"?name=" + key_value;
 		xhttp.open("GET", URL, true)
 		xhttp.send()
-		console.log(URL);
-	} 
-	else
-	if($(this).attr('data') == "close"){
-		$(this).attr('data', "open");
-		left_value = $('#leftdoor').attr('data');
-			URL = document.URL;
-		URL = URL.replace("riowebui.html","") + this.id;
-		URL = URL +"?name=" + left_value;
-		xhttp.open("GET", URL, true)
-		xhttp.send()
-		console.log(URL);	
+		console.log(engine_value);	
 	}	
 }
 
-function right_send(){
-	right_value = $('#rightdoor').attr('data');
-	URL = document.URL;
-	URL = URL.replace("riowebui.html","") + "rightdoor";
-	URL = URL +"?name=" + right_value;
-	xhttp.open("GET", URL, true)
-	xhttp.send()
-	console.log(URL);
-}
 
-function right_toggle(){
-	if($(this).attr('data') == "open"){
-		$(this).attr('data', "close");
-		right_value = $('#rightdoor').attr('data');
-			URL = document.URL;
-		URL = URL.replace("riowebui.html","") + this.id;
-		URL = URL +"?name=" + right_value;
-		xhttp.open("GET", URL, true)
-		xhttp.send()
-		console.log(URL);
-	} 
-	else
-	if($(this).attr('data') == "close"){
-		$(this).attr('data', "open");
-		right_value = $('#rightdoor').attr('data');
-			URL = document.URL;
-		URL = URL.replace("riowebui.html","") + this.id;
-		URL = URL +"?name=" + right_value;
-		xhttp.open("GET", URL, true)
-		xhttp.send()
-		console.log(URL);	
-	}	
-}
-
-function head_send(){
-	head_value = $('#headlights').attr('data');
-	URL = document.URL;
-	URL = URL.replace("riowebui.html","") + "headlights";
-	URL = URL +"?name=" + head_value;
-	xhttp.open("GET", URL, true)
-	xhttp.send()
-	console.log(URL);
-}
-
-function head_toggle(){
-	if($(this).attr('data') == "open"){
-		$(this).attr('data', "close");
-		head_value = $('#headlights').attr('data');
-			URL = document.URL;
-		URL = URL.replace("riowebui.html","") + this.id;
-		URL = URL +"?name=" + head_value;
-		xhttp.open("GET", URL, true)
-		xhttp.send()
-		console.log(URL);
-	} 
-	else
-	if($(this).attr('data') == "close"){
-		$(this).attr('data', "open");
-		head_value = $('#headlights').attr('data');
-			URL = document.URL;
-		URL = URL.replace("riowebui.html","") + this.id;
-		URL = URL +"?name=" + head_value;
-		xhttp.open("GET", URL, true)
-		xhttp.send()
-		console.log(URL);	
-	}	
-}
