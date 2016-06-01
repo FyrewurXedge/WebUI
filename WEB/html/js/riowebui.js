@@ -209,7 +209,7 @@ function engine_toggle(){
 		xhttp.open("GET", URL, true)
 		xhttp.send()
 		console.log(URL);
-	},3500);	
+	},15000);	
 }
 
 function left_send(){
