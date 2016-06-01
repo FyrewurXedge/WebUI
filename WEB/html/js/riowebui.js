@@ -6,6 +6,8 @@ var engine_value = $( '#engine' ).attr('data');
 var left_value = $( '#leftdoor' ).attr('data');
 var right_value = $( '#rightdoor' ).attr('data');
 var head_value = $( '#headlights' ).attr('data');
+var under_value = $( '#under' ).attr('data');
+var wiper_value = $( '#wiper' ).attr('data');
 
 document.addEventListener('touchmove', this.touchmove);
 function touchmove(e) {
@@ -67,6 +69,15 @@ $(document).ready(function(){
 		//headlights
 		$( "#headlights" ).ready(head_send);
 		$( "#headlights" ).click(head_toggle);
+		
+		//under
+		$( "#under" ).ready(under_send);
+		$( "#under" ).click(under_toggle);
+		
+		//wiper
+		$( "#wiper" ).ready(wiper_send);
+		$( "#wiper" ).click(wiper_toggle);
+		
 	}
 )
 function mDown(){	
@@ -297,6 +308,74 @@ function head_toggle(){
 			URL = document.URL;
 		URL = URL.replace("riowebui.html","") + this.id;
 		URL = URL +"?name=" + head_value;
+		xhttp.open("GET", URL, true)
+		xhttp.send()
+		console.log(URL);	
+	}	
+}
+
+function wiper_send(){
+	wiper_value = $('#wiper').attr('data');
+	URL = document.URL;
+	URL = URL.replace("riowebui.html","") + "wiper";
+	URL = URL +"?name=" + wiper_value;
+	xhttp.open("GET", URL, true)
+	xhttp.send()
+	console.log(URL);
+}
+
+function wiper_toggle(){
+	if($(this).attr('data') == "open"){
+		$(this).attr('data', "close");
+		wiper_value = $('#wiper').attr('data');
+			URL = document.URL;
+		URL = URL.replace("riowebui.html","") + this.id;
+		URL = URL +"?name=" + wiper_value;
+		xhttp.open("GET", URL, true)
+		xhttp.send()
+		console.log(URL);
+	} 
+	else
+	if($(this).attr('data') == "close"){
+		$(this).attr('data', "open");
+		wiper_value = $('#wiper').attr('data');
+			URL = document.URL;
+		URL = URL.replace("riowebui.html","") + this.id;
+		URL = URL +"?name=" + wiper_value;
+		xhttp.open("GET", URL, true)
+		xhttp.send()
+		console.log(URL);	
+	}	
+}
+
+function under_send(){
+	under_value = $('#under').attr('data');
+	URL = document.URL;
+	URL = URL.replace("riowebui.html","") + "under";
+	URL = URL +"?name=" + under_value;
+	xhttp.open("GET", URL, true)
+	xhttp.send()
+	console.log(URL);
+}
+
+function under_toggle(){
+	if($(this).attr('data') == "open"){
+		$(this).attr('data', "close");
+		under_value = $('#under').attr('data');
+			URL = document.URL;
+		URL = URL.replace("riowebui.html","") + this.id;
+		URL = URL +"?name=" + under_value;
+		xhttp.open("GET", URL, true)
+		xhttp.send()
+		console.log(URL);
+	} 
+	else
+	if($(this).attr('data') == "close"){
+		$(this).attr('data', "open");
+		under_value = $('#under').attr('data');
+			URL = document.URL;
+		URL = URL.replace("riowebui.html","") + this.id;
+		URL = URL +"?name=" + under_value;
 		xhttp.open("GET", URL, true)
 		xhttp.send()
 		console.log(URL);	

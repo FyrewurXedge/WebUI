@@ -68,6 +68,11 @@
 	left: 4%;
 }
 
+#accessory{
+	position: relative;
+	left: 4%;
+}
+
 #left{
 	padding-left: 75px;
 	padding-right: 75px;
@@ -94,46 +99,72 @@
 }
 
 #headlights{
-	background-image: url(/rio/images/ic_highlight_black_36dp.png);
+	background-image: url(/rio/images/ic_flare_black_24dp.png);
 	background-position: center;
 	background-color: transparent;
-	background-repeat: no-repeat;	
+	background-repeat: no-repeat;
+	height: 50px;
 	padding-left: 50px;
 	padding-right: 50px;
 }
 
 #leftdoor{
-	background-image: url(/rio/images/ic_first_page_black_36dp.png);
+	background-image: url(/rio/images/ic_first_page_black_24dp.png);
 	background-position: center;
 	background-color: transparent;
-	background-repeat: no-repeat;	
+	background-repeat: no-repeat;
+	height: 50px;
 	padding-left: 50px;
 	padding-right: 50px;
 }
 
 #rightdoor{
-	background-image: url(/rio/images/ic_last_page_black_36dp.png);
+	background-image: url(/rio/images/ic_last_page_black_24dp.png);
 	background-position: center;
 	background-color: transparent;
-	background-repeat: no-repeat;	
+	background-repeat: no-repeat;
+	height: 50px;
 	padding-left: 50px;
 	padding-right: 50px;
 }
 
 #key{
-	background-image: url(/rio/images/ic_vpn_key_black_36dp.png);
+	background-image: url(/rio/images/ic_vpn_key_black_24dp.png);
 	background-position: center;
 	background-color: transparent;
 	background-repeat: no-repeat;	
+	height: 50px;
 	padding-left: 75px;
 	padding-right: 75px;
 }
 
 #engine{
-	background-image: url(/rio/images/ic_https_black_36dp.png);
+	background-image: url(/rio/images/ic_restore_black_24dpx.png);
 	background-position: center;
 	background-color: transparent;
-	background-repeat: no-repeat;	
+	background-repeat: no-repeat;
+	height: 50px;
 	padding-left: 75px;
 	padding-right: 75px;
 }
+
+#wiper{
+	background-image: url(/rio/images/ic_portable_wifi_off_black_24dp.png);
+	background-position: center;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	height: 50px;
+	padding-left: 75px;
+	padding-right: 75px;
+}
+
+#under{
+	background-image: url(/rio/images/ic_wb_iridescent_black_24dp.png);
+	background-position: center;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	height: 50px;
+	padding-left: 75px;
+	padding-right: 75px;
+}
+
