@@ -1623,7 +1623,7 @@ FPGA code for Onboard LEDs are placed on the block diagram to Monitor Code via o
 						<Property Name="Comp.CustomXilinxParameters" Type="Str"></Property>
 						<Property Name="Comp.MaxFanout" Type="Int">-1</Property>
 						<Property Name="Comp.RandomSeed" Type="Bool">false</Property>
-						<Property Name="Comp.Version.Build" Type="Int">1</Property>
+						<Property Name="Comp.Version.Build" Type="Int">2</Property>
 						<Property Name="Comp.Version.Fix" Type="Int">0</Property>
 						<Property Name="Comp.Version.Major" Type="Int">1</Property>
 						<Property Name="Comp.Version.Minor" Type="Int">0</Property>
@@ -1659,7 +1659,7 @@ FPGA code for Onboard LEDs are placed on the block diagram to Monitor Code via o
 		<Item Name="RTMain - Top Level.vi" Type="VI" URL="../RTMain - Top Level.vi"/>
 		<Item Name="rio" Type="Web Service">
 			<Property Name="Bld_buildSpecName" Type="Str"></Property>
-			<Property Name="Bld_version.build" Type="Int">40</Property>
+			<Property Name="Bld_version.build" Type="Int">42</Property>
 			<Property Name="ws.autoIncrementVersion" Type="Bool">true</Property>
 			<Property Name="ws.disconnectInline" Type="Bool">true</Property>
 			<Property Name="ws.disconnectTypeDefs" Type="Bool">false</Property>
@@ -1868,6 +1868,7 @@ FPGA code for Onboard LEDs are placed on the block diagram to Monitor Code via o
 			<Item Name="ws_runtime.dll" Type="Document" URL="ws_runtime.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="WEBUI_FPGATarget_FPGABitfilewithO_5--vQLUfyAg.lvbitx" Type="Document" URL="../FPGA Bitfiles/WEBUI_FPGATarget_FPGABitfilewithO_5--vQLUfyAg.lvbitx"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build">
 			<Item Name="RIO_web_ui-rtapp" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
@@ -1888,7 +1889,7 @@ FPGA code for Onboard LEDs are placed on the block diagram to Monitor Code via o
 				<Property Name="Bld_localDestDir" Type="Path">/C/Users/Edrick/Documents/GitHub/LabVIEW builds/RIO_web_ui-rtapp</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{849D46D0-36F6-4E90-A424-C10D692236DA}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">33</Property>
+				<Property Name="Bld_version.build" Type="Int">35</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
